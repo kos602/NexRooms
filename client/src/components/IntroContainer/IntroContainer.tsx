@@ -1,8 +1,7 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
-import Swoosh from "./swoosh";
 import VideoLogo from "./VideoLogo";
-import TwilioLogo from "./TwilioLogo";
+import NexLogo from "./NexLogo";
 import { useAppState } from "../../state";
 import UserMenu from "./UserMenu/UserMenu";
 import { useLocation } from "react-router-dom";
@@ -41,7 +40,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundImage: Swoosh,
+    backgroundColor: "rgb(102,204,255)",
+    color: "white",
     backgroundSize: "cover",
     width: "296px",
     [theme.breakpoints.down("sm")]: {
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       }
     }
   },
-  twilioLogo: {
+  NexLogo: {
     position: "absolute",
     top: 0,
     left: 0,
@@ -106,7 +106,7 @@ const IntroContainer = (props: IntroContainerProps) => {
 
   return (
     <div className={classes.background}>
-      <TwilioLogo className={classes.twilioLogo} />
+      <NexLogo className={classes.NexLogo} />
       {user && location.pathname !== "/login" && <UserMenu />}
       <div className={classes.container}>
         <div className={classes.innerContainer}>
@@ -114,7 +114,7 @@ const IntroContainer = (props: IntroContainerProps) => {
             <div className={classes.logoContainer}>
               <VideoLogo />
               <Typography variant="h6" className={classes.title}>
-                Twilio Programmable Video
+                NexRooms
               </Typography>
             </div>
           </div>

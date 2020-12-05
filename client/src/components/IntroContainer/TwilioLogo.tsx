@@ -3,7 +3,7 @@ import React, { SVGProps } from "react";
 export default function TwilioLogo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      fill="#F22F46"
+      fill="#66CCFF"
       xmlns="http://www.w3.org/2000/svg"
       width="30"
       height="30"
